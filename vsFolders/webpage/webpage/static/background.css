@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Press Start 2P";
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(49, 54, 63);
+}
+
+.background{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 40, 49);
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.textbox{
+    position: relative;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    background-color: rgb(70, 54, 70);
+    color: white;
+    transition: transform 0.3s ease;
+
+}
+
+#EnterB {
+    padding: 5px 20px;
+    background-color: #76ABAE;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+
+}
+
+#EnterB:hover {
+    background-color: #4a7f81;
+}
+
+#main_header{
+    position: absolute;
+    top: 0px;
+    padding: 25px;
+    font-size: 10px;
+    transition: transform 0.4s ease;
+
+}
+
+
+#hTitle{
+    color: rgb(251, 168, 52);
+}
+
+#texts_container{
+    position: absolute;
+    left: 60%;
+    top: 35%;
+    display: block;
+}
+
+.text{
+    color: rgb(89, 213, 224);
+    margin: 10px;
+    font-size: 20px;
+}
+
+.text:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 768px) {
+    .background {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .textbox {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .textbox {
+        width: 120px;
+    }
+
+    #main_header {
+        font-size: 8px;
+    }
+}
+

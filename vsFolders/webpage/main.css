@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.Nav {
+    color: white;
+    background-color: #27374D;
+    padding: 10px;
+    display: flex;
+}
+
+.btn {
+    height: 50px;
+    font-family: Calibri;
+    background-color: #27374D;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #526D82;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1);
+
+}
+
+.pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-item {
+    flex: 1;
+    margin: 10px 100px;
+    max-width:400px; 
+}
+
+.flex-item img {
+    padding: 40px 0;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
+    border-radius: 20%;
+
+}
+
+.flex-item img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.font {
+    font-size: 20px;
+    font-family: Calibri;
+}
+
+body {
+    background-color: #DDE6ED;
+}
+
+#content {
+    background-color: #526D82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+}
+
+h2 {
+    font-size: 36px;
+    color: lightgrey;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.image-text {
+    display: none;
+}
+
+p{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: large;
+    font-family: cursive;
+
+}
+
+.footer1{
+    display: flex;
+    justify-content: center;
+    background-color: #9DB2BF;
+    min-height: 250px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.background-Container{
+    background-color:#9DB2BF;
+}
+
+
+.conttext {
+    text-align: center; /* Center-align the text horizontally */
+}
+
+h6 {
+    margin: 0 auto; /* Center-align the text horizontally within the container */
+    max-width: 50%; /* Set a maximum width for better readability */
+    line-height: 2.5;
+    font-size: 18;
+}
+
+
+
+@media (max-width: 800px) {
+    #btn {
+        font-size: 16px; /* Reduce font size for buttons on smaller screens */
+    }
+
+    .flex-item {
+        flex: 1 0 20%; /* Full width for images on smaller screens */
+        max-width: none;
+
+    }
+
+    .flex-item img {
+        padding: 15px; /* Reduced padding for images on smaller screens */
+
+    }
+}

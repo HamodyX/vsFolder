@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#Play{
+    position: absolute;
+    z-index: 1;
+    transition: transform 0.3s ease;
+
+}
+
+#Play:hover{
+    transform: scale(1.1);
+}

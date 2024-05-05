@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <div id="main_header">
+                <h1 id="hTitle">Welcome To The Profile Hub</h1>
+            </div>
+            <div id="textbox_field">
+                <input type="text" class="textbox" id="action" value="help" placeholder="/Help" >
+                <button id="EnterB" onclick="enter()">Enter</button>
+                
+                <div id="texts_container">
+                    <p class="text" onclick="send_txt()">1. About me</p>
+                    <p class="text">2. GitHub</p>
+                    <p class="text">3. Discord</p>
+                    <p class="text">4. Launch</p>
+                    <p class="text" onclick="currency()">5. Currency Ex <div>
+                        <input class="prim-second" value="EUR" type="text" name="primary" id="primary">
+                        <input class="prim-second"  value="SEK" type="text" name="secondary" id="secondary">
+                        </p>
+                    </div>
+                    <p class="text">6. Links</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='input.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Align contents with space between */
+    align-items: center; /* Vertically center-align contents */
+
+    max-width: 500px; /* Adjust this value as needed */
+    margin: 0 auto;
+}
+
+#mainDiv {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 45%; /* Adjust the width as needed */
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Add spacing between buttons */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h3 {
+    margin: 0 auto;
+    margin-top: 60px;
+    font-size: 20px;
+    color: #007BFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 200px;
+
+}
