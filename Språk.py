@@ -1,16 +1,11 @@
-konsonant = [ 'b', 'c', 'd', 'f', 'g', 'h', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+konsonant = [ 'b', 'c', 'd', 'f', 'g', 'h', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z', 'j']
 vokaler = ['a', 'e', 'i', 'o', 'u', 'y', 'å','ä','ö']
 
-print("1. Från Rövar till Svenska")
-print("2. Från Svenska till Rövar")
-print("3. Språk Analysering")
 
-Option = int(input("Välj Alternativ: "))
-
+word  = input("Välj ord: ")
 
 def Rövar(konsonant, vokaler):
     mening = []
-    word = str(input("Svenska Ordet: "))
     for i in range(len(word)):
         if word[i] in vokaler:
             mening.append(word[i])   
@@ -24,7 +19,6 @@ def Rövar(konsonant, vokaler):
 
 def Svenska(konsonant, vokaler):
     mening = []
-    word = str(input("Rövar order: "))
     i = 0
     while i < len(word):
         if word[i] == " ":
@@ -46,29 +40,14 @@ def Svenska(konsonant, vokaler):
 def analysering_process(konsonant, vokaler):
     i = 0 
     j = 1
-    word = str(input("Checka: "))
-    while i < len(word)-2:
-        print("check")
-        if word[i] in vokaler:
-            print(word[i])
+    while i < len(word):
+        if word[i] in vokaler or word[i] == " ":
             i += 1
-        elif word[i] == " ":
-            i += 1
-        elif word[i] in konsonant and word[i + 1] == "o" and word[i] == word[i + 2]:
-            print(f"Rövarspråk detected, NANI! {j * 10}%")
+        elif i+2 < len(word) and word[i] in konsonant and word[i + 1] == "o" and word[i] == word[i + 2]:
             j += 1
             i += 3
         else:
-            return print("Analysis complete -Failed To meet requirements")
-    return print("Rövar språk 100%")
+            return Rövar(konsonant, vokaler)
+    return Svenska(konsonant, vokaler)
 
-
-
-if Option == 1:
-    Svenska(konsonant, vokaler)
-elif Option == 2:
-    Rövar(konsonant, vokaler)
-elif Option == 3:
-    analysering_process(konsonant, vokaler)
-else:
-    print("Wrong option")
+analysering_process(konsonant, vokaler)
